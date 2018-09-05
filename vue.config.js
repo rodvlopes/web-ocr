@@ -7,5 +7,8 @@ module.exports = {
   },
   transpileDependencies: [
     /[\\\/]node_modules[\\\/]quasar-framework[\\\/]/
-  ]
+  ],
+  devServer: {
+    disableHostCheck: true
+  }
 }

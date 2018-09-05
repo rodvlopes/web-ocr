@@ -1,20 +1,26 @@
 <template>
   <q-page>
     <q-progress :percentage="progress" color="info" height="10px" />
-    <div class="row">
-      <q-uploader multiple :url="picUploadUrl" @add="onAddFiles" />
-      <q-select v-model="lang" :options="langOptions" />
+    <div class="row justify-center">
+      <div class="col-8">
+        <q-uploader multiple :url="picUploadUrl" @add="onAddFiles" />
+        <q-select v-model="lang" :options="langOptions" />
+      </div>
     </div>
-    <div class="row">
-      <img ref="imgToRecognize" src="../assets/ocr_sample.png">
+    <div class="row justify-center">
+      <div class="col-8">
+        <img ref="imgToRecognize" src="../assets/ocr_sample.png">
+      </div>
     </div>
-    <div class="row">
-	    <q-input v-model="result" inverted
-			type="textarea" float-label="Result"
-			:max-height="100"
-			rows="7"
-		/>
-	</div>
+    <div class="row justify-center">
+      <div class="col-8">
+        <q-input v-model="result" inverted
+        type="textarea" float-label="Result"
+        :max-height="100"
+        rows="7"
+        />
+      </div>
+    </div>
   </q-page>
 </template>
 
